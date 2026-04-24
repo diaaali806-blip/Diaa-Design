@@ -1014,7 +1014,19 @@
                 }, 500); // الانتظار نصف ثانية لإنهاء تأثير الاختفاء
             }, 60000);
         }
-    </script>
+    <script>
+   const cardsWrapper = document.getElementById("portfolio-cards");
+
+portfolioWorks.forEach(work => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  card.innerHTML = `
+    <img src="images/${work.folder}/${work.images[0]}">
+  `;
+
+  cardsWrapper.appendChild(card);
+});
 </body>
 
 </html>
